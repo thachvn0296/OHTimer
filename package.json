@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Once Human Reset Timer Discord Bot",
   "main": "bot.js",
+  "private": true,
   "scripts": {
     "start": "node bot.js"
   },
