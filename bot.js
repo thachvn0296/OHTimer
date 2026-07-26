@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 const { Client, GatewayIntentBits, REST, Routes, SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 const port = process.env.PORT || 10000 
@@ -6,7 +7,7 @@ const port = process.env.PORT || 10000
 require('dotenv').config();
 
 app.get('/', (req, res) => {
-  res.send('OH Timer is active!')
+  res.sendFile(path.join(__dirname, 'index.html'));
 })
 
 app.listen(port, () => {
