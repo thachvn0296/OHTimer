@@ -1,5 +1,17 @@
+const express = require('express');
+const app = express();
 const { Client, GatewayIntentBits, REST, Routes, SlashCommandBuilder, EmbedBuilder } = require('discord.js');
+const port = process.env.PORT || 10000 
+
 require('dotenv').config();
+
+app.get('/', (req, res) => {
+  res.send('OH Timer is active!')
+})
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
 
 // Create the Client instance 
 const client = new Client({
@@ -83,6 +95,7 @@ client.on('interactionCreate', async interaction => {
     await interaction.reply({ embeds: [embed] });
   }
 });
+
 
 // Init connection
 client.login(process.env.DISCORD_TOKEN);
