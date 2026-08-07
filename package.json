@@ -2,10 +2,10 @@
   "name": "once-human-timer-bot",
   "version": "1.0.0",
   "description": "Once Human Reset Timer Discord Bot",
-  "main": "bot.js",
+  "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "node bot.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "discord.js": "^14.14.1",
